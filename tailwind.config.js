@@ -10,9 +10,8 @@ const config = {
   theme: {
     extend: {
       fontFamily: {
-        staff: ["var(--font-staff)", ...defaultTheme.fontFamily.sans],
-        drunk: ["var(--font-drunk)", ...defaultTheme.fontFamily.sans],
-        helvetica: ["var(--font-helvetica)", ...defaultTheme.fontFamily.sans],
+        sans: ['Inter', ...defaultTheme.fontFamily.sans], // Inter como fuente sans-serif predeterminada
+        serif: ['Lato', ...defaultTheme.fontFamily.serif], // Lato como fuente serif, puedes ajustar según tus necesidades
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

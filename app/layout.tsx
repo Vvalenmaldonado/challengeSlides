@@ -1,65 +1,38 @@
-import localFont from "next/font/local";
 
+import type { Metadata } from 'next';
 import NavBar from "~/components/navBar";
 import "~/styles/global.css";
 
+ 
+export const metadata: Metadata = {
+  title: 'Angela Smith',
+  description: 'Challenge for the company Slides by Valentina Maldonado',
+  keywords: ['Challenge', 'Slides', 'React', "Typescript", "Next.js"],
+  metadataBase: new URL("https://sitio.com"),
+  authors: [{ name: "Valentina Maldonado", url: "https://nextjs.org" }],
+  icons: {
+    icon: '/next.svg',
+    shortcut: '/shortcut-icon.png',
+    apple: '/next.svg',
+  },
+  alternates: {
+    canonical: "https://sitio.com/",
+  },
+  openGraph: {
+    title: "Angela Smith",
+    description: "Challenge for the company Slides by Valentina Maldonado",
+    url: "https://sitio.com/", 
+    images: '/path-to-your-image.jpg', 
+    type: "website"
+  },
+}
 
-const staff = localFont({
-  src: [
-    {
-      path: "../public/fonts/Staff-Wide-Regular.otf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/Staff-Wide-Italic.otf",
-      weight: "400",
-      style: "italic",
-    },
-    {
-      path: "../public/fonts/Staff-Wide-Medium.otf",
-      weight: "500",
-      style: "normal",
-    },
-  ],
-  variable: "--font-staff",
-  fallback: ["arial"],
-});
-
-const drunk = localFont({
-  src: [
-    {
-      path: "../public/fonts/DrukTextWide-Bold.otf",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/DrukTextWide-BoldItalic.otf",
-      weight: "400",
-      style: "italic",
-    },
-  ],
-  variable: "--font-drunk",
-  fallback: ["arial"],
-});
-
-const helvetica = localFont({
-  src: [
-    {
-      path: "../public/fonts/Helvetica-LT-Ultra-Compressed.ttf",
-      weight: "400",
-      style: "normal",
-    },
-  ],
-  variable: "--font-helvetica",
-  fallback: ["arial"],
-});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="es-419"
-      // className={`${staff.variable} ${drunk.variable} ${helvetica.variable} font-sans touch-auto overflow-auto h-screen relative scrollbar`}
+      className={" font-sans touch-auto overflow-auto h-screen relative scrollbar"}
     >
       <body className="flex overflow-auto relative flex-col w-full h-screen">
         <NavBar/>
