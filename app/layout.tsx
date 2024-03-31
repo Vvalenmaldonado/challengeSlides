@@ -22,21 +22,26 @@ export const metadata: Metadata = {
   title: "Angela Smith",
   description: "Challenge for the company Slides by Valentina Maldonado",
   keywords: ["Challenge", "Slides", "React", "Typescript", "Next.js"],
-  metadataBase: new URL("https://sitio.com"),
-  authors: [{ name: "Valentina Maldonado", url: "https://nextjs.org" }],
+  metadataBase: new URL("https://challenge-slides.vercel.app/"),
+  authors: [
+    {
+      name: "Valentina Maldonado",
+      url: "https://challenge-slides.vercel.app/",
+    },
+  ],
   icons: {
     icon: "/next.svg",
-    shortcut: "/shortcut-icon.png",
+    shortcut: "/next.svg",
     apple: "/next.svg",
   },
   alternates: {
-    canonical: "https://sitio.com/",
+    canonical: "https://challenge-slides.vercel.app/",
   },
   openGraph: {
     title: "Angela Smith",
     description: "Challenge for the company Slides by Valentina Maldonado",
-    url: "https://sitio.com/",
-    images: "/path-to-your-image.jpg",
+    url: "https://challenge-slides.vercel.app/",
+    images: "/next.svg",
     type: "website",
   },
 };
