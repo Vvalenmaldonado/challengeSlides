@@ -101,7 +101,7 @@ export default function HomePage() {
         </Button>
       </div>
       <Link aria-label="scroll to another section" className="w-max" href={"/"}>
-        <Logo className="sm:relative sm:mt-[14px] lg:mt-0 lg:absolute bottom-0 sm:w-[27px] sm:h-[27px] lg:w-[32px] lg:h-[32px] cursor-pointer z-10 " />
+        <Logo className="sm:relative sm:mt-[14px] lg:mt-0 lg:absolute lg:bottom-6 sm:bottom-0  sm:w-[27px] sm:h-[27px] lg:w-[32px] lg:h-[32px] cursor-pointer z-10 " />
       </Link>
     </section>
   );
