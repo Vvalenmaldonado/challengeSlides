@@ -1,14 +1,14 @@
 "use client";
 
-import { useMediaQuery } from "@uidotdev/usehooks";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useMedia } from "react-use";
 import { Button } from "~/components/button";
 import Arrow from "../public/assets/arrow.svg";
 import Logo from "../public/assets/logo.svg";
 
 export default function HomePage() {
-  const isMobile = useMediaQuery("only screen and (max-width: 1024px");
+  const isMobile = useMedia("(max-width: 1024px", false);
   const imageUrl = isMobile ? "/images/homeMobile.png" : "/images/home.png";
 
   const imageVariants = {
@@ -101,9 +101,7 @@ export default function HomePage() {
       </div>
 
       <Logo
-        className={
-          "absolute bottom-0 w-[32px] h-[32px]  hover:scale-110 transition-all duration-300 cursor-pointer "
-        }
+        className={"z-10 absolute bottom-0 w-[32px] h-[32px cursor-pointer "}
       />
     </section>
   );

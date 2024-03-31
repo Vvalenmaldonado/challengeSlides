@@ -1,4 +1,5 @@
 "use client";
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -7,7 +8,6 @@ import Menu from "../../../public/assets/menu.svg";
 const NavBar = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   const menuRef = useRef<HTMLUListElement>(null);
-  const buttonRef = useRef<HTMLButtonElement>(null);
 
   const handleOpenMenu = () => {
     setOpenMenu(!openMenu);
@@ -15,19 +15,14 @@ const NavBar = () => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (
-        menuRef.current &&
-        !menuRef.current.contains(event.target as Node) &&
-        buttonRef.current &&
-        !buttonRef.current.contains(event.target as Node)
-      ) {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setOpenMenu(false);
       }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [menuRef, buttonRef]);
+  }, [menuRef]);
 
   const menuVariants = {
     open: {
@@ -47,10 +42,12 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="fixed w-full flex flex-row items-center justify-end sm:pt-6  lg:py-6 lg:px-11 sm:px-6">
+    <nav
+      ref={menuRef}
+      className="fixed z-10 w-full flex flex-row items-center justify-end sm:pt-6  lg:py-6 lg:px-11 sm:px-6"
+    >
       <div className="w-10 h-10"></div>
       <motion.ul
-        ref={menuRef}
         initial="closed"
         animate={openMenu ? "open" : "closed"}
         variants={menuVariants}
@@ -78,7 +75,7 @@ const NavBar = () => {
           </motion.li>
         ))}
       </motion.ul>
-      <button ref={buttonRef} className="group" onClick={handleOpenMenu}>
+      <button className="group" onClick={handleOpenMenu}>
         <Menu
           className={`w-10 h-10 group-hover:text-[#ddf247] ${
             openMenu ? "text-[#ddf247]" : ""
