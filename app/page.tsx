@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useMedia } from "react-use";
 import { Button } from "~/components/button";
 import Arrow from "../public/assets/Arrow.svg";
@@ -99,10 +100,11 @@ export default function HomePage() {
           Get started
         </Button>
       </div>
-
-      <Logo
-        className={"z-10 absolute bottom-0 w-[32px] h-[32px cursor-pointer "}
-      />
+      <Link className="z-10" href={"/"}>
+        <Logo
+          className={"absolute bottom-0 w-[32px] h-[32px cursor-pointer "}
+        />
+      </Link>
     </section>
   );
 }
