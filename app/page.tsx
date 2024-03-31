@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useMedia } from "react-use";
 import { Button } from "~/components/button";
-import Arrow from "../public/assets/arrow.svg";
+import Arrow from "../public/assets/Arrow.svg";
 import Logo from "../public/assets/logo.svg";
 
 export default function HomePage() {
