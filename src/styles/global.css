@@ -1,13 +1,4 @@
-/* // @import "./_reset.scss";
-// // @import "./_colors.scss";
-// // @import "./_easings.scss";
-// @import "./_functions.scss";
-// // @import "./_layout.scss";
-// // @import "./_utils.scss";
-// // @import "./_font-style.scss";
-// // @import "./_themes.scss";
-// // @import "./_scroll.scss"; */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lato:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lato:wght@400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
