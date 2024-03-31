@@ -2,6 +2,22 @@ import type { Metadata } from "next";
 import NavBar from "~/components/navBar";
 import "~/styles/global.css";
 
+import { Inter, Lato } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+  weight: ["400", "600"],
+});
+
+const lato = Lato({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-lato",
+  weight: ["400", "700"],
+});
+
 export const metadata: Metadata = {
   title: "Angela Smith",
   description: "Challenge for the company Slides by Valentina Maldonado",
@@ -33,9 +49,7 @@ export default function RootLayout({
   return (
     <html
       lang="es-419"
-      className={
-        " font-sans touch-auto overflow-auto h-full relative scrollbar "
-      }
+      className={`${inter.variable} ${lato.variable} touch-auto overflow-auto h-full relative scrollbar `}
     >
       <body className="flex overflow-auto relative flex-col w-full h-full">
         <NavBar />

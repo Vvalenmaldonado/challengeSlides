@@ -89,7 +89,7 @@ export default function HomePage() {
             quality={100}
             width={673}
             height={740}
-            sizes="50vw"
+            sizes="35vw"
             priority
           />
         </motion.div>
@@ -100,7 +100,7 @@ export default function HomePage() {
           Get started
         </Button>
       </div>
-      <Link className="z-10" href={"/"}>
+      <Link aria-label="scroll to another section" className="z-10" href={"/"}>
         <Logo
           className={"absolute bottom-0 w-[32px] h-[32px cursor-pointer "}
         />
