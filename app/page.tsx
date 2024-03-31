@@ -88,7 +88,7 @@ export default function HomePage() {
             quality={100}
             width={673}
             height={740}
-            sizes="100vw"
+            sizes="50vw"
             priority
           />
         </motion.div>
