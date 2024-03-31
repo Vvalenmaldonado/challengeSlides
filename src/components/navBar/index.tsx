@@ -46,7 +46,6 @@ const NavBar = () => {
       ref={menuRef}
       className="fixed z-10 w-full flex flex-row items-center justify-end sm:pt-6  lg:py-6 lg:px-11 sm:px-6"
     >
-      <div className="w-10 h-10"></div>
       <motion.ul
         initial="closed"
         animate={openMenu ? "open" : "closed"}
@@ -81,7 +80,7 @@ const NavBar = () => {
         onClick={handleOpenMenu}
       >
         <Menu
-          className={`w-10 h-10 group-hover:text-[#ddf247] ${
+          className={`sm:w-[30px] sm:h-[30px] lg:w-10 lg:h-10 group-hover:text-[#ddf247] ${
             openMenu ? "text-[#ddf247]" : ""
           }`}
         />

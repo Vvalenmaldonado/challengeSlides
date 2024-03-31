@@ -27,7 +27,7 @@ export default function HomePage() {
     },
   };
   return (
-    <section className="sm:py-16 lg:py-20 mx-auto max-w-[1352px] lg:h-full flex flex-col justify-between items-center sm:px-3 relative">
+    <section className="sm:pt-16 lg:py-20 mx-auto max-w-[1352px] lg:h-full flex flex-col justify-between items-center sm:px-[11px] relative">
       <div className="flex lg:flex-row sm:flex-col items-center sm:justify-center lg:justify-between w-full  lg:h-full lg:gap-8 lg:px-4 ">
         <div className="lg:w-2/4 lg:text-start sm:text-center min-w-[400] ">
           <motion.span
@@ -94,16 +94,14 @@ export default function HomePage() {
           />
         </motion.div>
         <Button
-          className="w-full max-w lg:hidden sm:flex sm:mx-4"
+          className="sm:max-h-[54px] w-full max-w lg:hidden sm:flex sm:mx-4"
           svg={<Arrow className={"w-[12px] h-[12px] hover:text-[#ddf247]"} />}
         >
           Get started
         </Button>
       </div>
-      <Link aria-label="scroll to another section" className="z-10" href={"/"}>
-        <Logo
-          className={"absolute bottom-0 w-[32px] h-[32px cursor-pointer "}
-        />
+      <Link aria-label="scroll to another section" className="w-max" href={"/"}>
+        <Logo className="sm:relative sm:mt-[14px] lg:mt-0 lg:absolute bottom-0 sm:w-[27px] sm:h-[27px] lg:w-[32px] lg:h-[32px] cursor-pointer z-10 " />
       </Link>
     </section>
   );
