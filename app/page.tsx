@@ -1,30 +1,15 @@
 "use client";
 
+import { useMediaQuery } from "@uidotdev/usehooks";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import { Button } from "~/components/button";
 import Arrow from "../public/assets/arrow.svg";
 import Logo from "../public/assets/logo.svg";
 
 export default function HomePage() {
-  const [imageUrl, setImageUrl] = useState("/images/home.png");
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 1024) {
-        setImageUrl("/images/homeMobile.png");
-      } else {
-        setImageUrl("/images/home.png");
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isMobile = useMediaQuery("only screen and (max-width: 1024px");
+  const imageUrl = isMobile ? "/images/homeMobile.png" : "/images/home.png";
 
   const imageVariants = {
     hidden: { opacity: 0 },
@@ -91,7 +76,7 @@ export default function HomePage() {
           </motion.div>
         </div>
         <motion.div
-          className="sm:my-6 lg:my-0"
+          className="sm:my-6 lg:my-0 sm:w-full lg:w-auto"
           initial="hidden"
           animate="visible"
           variants={imageVariants}
