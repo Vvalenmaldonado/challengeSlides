@@ -75,7 +75,11 @@ const NavBar = () => {
           </motion.li>
         ))}
       </motion.ul>
-      <button className="group" onClick={handleOpenMenu}>
+      <button
+        aria-label="open burger menu"
+        className="group"
+        onClick={handleOpenMenu}
+      >
         <Menu
           className={`w-10 h-10 group-hover:text-[#ddf247] ${
             openMenu ? "text-[#ddf247]" : ""
