@@ -26,6 +26,9 @@ const config = {
         "2xl": "1536px",
         "3xl": "1920px",
       },
+      colors: {
+        accent: "#ddf247",
+      },
     },
   },
   plugins: [],

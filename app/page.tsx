@@ -27,9 +27,9 @@ export default function HomePage() {
     },
   };
   return (
-    <section className="sm:pt-16 lg:py-20 mx-auto max-w-[1352px] lg:h-full flex flex-col justify-between items-center sm:px-[11px] relative">
-      <div className="flex lg:flex-row sm:flex-col items-center sm:justify-center lg:justify-between w-full  lg:h-full lg:gap-8 lg:px-4 ">
-        <div className="lg:w-2/4 lg:text-start sm:text-center min-w-[400] ">
+    <section className="sm:pt-16 lg:py-20 mx-auto max-w-[675px] lg:max-w-[1352px] h-full flex flex-col justify-between items-center sm:px-[11px] relative">
+      <div className=" flex lg:flex-row sm:flex-col items-center sm:justify-center lg:justify-between w-full h-full lg:gap-8 lg:px-4">
+        <div className="lg:w-2/4 lg:text-start sm:text-center min-w-min lg:basis-[593px]">
           <motion.span
             initial="hidden"
             animate="visible"
@@ -51,15 +51,12 @@ export default function HomePage() {
             initial="hidden"
             animate="visible"
             variants={componentVariants}
-            className="text-base font-light lg:text-[#141414] sm:text-black"
+            className="text-base font-light lg:text-[#141414] sm:text-black line-clamp-2 lg:line-clamp-none"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt
-            <span className="sm:hidden lg:inline">
-              ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.
-            </span>
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
           </motion.p>
           <motion.div
             initial="hidden"
@@ -68,16 +65,14 @@ export default function HomePage() {
           >
             <Button
               className="my-8 lg:flex sm:hidden"
-              svg={
-                <Arrow className={"w-[12px] h-[12px] hover:text-[#ddf247]"} />
-              }
+              svg={<Arrow className={"w-[12px] h-[12px] hover:text-accent"} />}
             >
               Get started
             </Button>
           </motion.div>
         </div>
         <motion.div
-          className="sm:my-6 lg:my-0 sm:w-full lg:w-auto"
+          className="sm:my-6 lg:my-0 sm:w-full lg:w-auto relative self-stretch flex-1 lg:basis-[673px]"
           initial="hidden"
           animate="visible"
           variants={imageVariants}
@@ -87,21 +82,24 @@ export default function HomePage() {
             src={imageUrl}
             alt="Logo"
             quality={100}
-            width={673}
-            height={740}
+            fill
             sizes="35vw"
             priority
           />
         </motion.div>
         <Button
-          className="sm:max-h-[54px] w-full max-w lg:hidden sm:flex sm:mx-4"
-          svg={<Arrow className={"w-[12px] h-[12px] hover:text-[#ddf247]"} />}
+          className="sm:max-h-[54px] w-full max-w-[369px] lg:hidden sm:flex sm:mx-4"
+          svg={<Arrow className={"w-[12px] h-[12px] hover:text-accent"} />}
         >
           Get started
         </Button>
       </div>
-      <Link aria-label="scroll to another section" className="w-max" href={"/"}>
-        <Logo className="sm:relative sm:mt-[14px] lg:mt-0 lg:absolute lg:bottom-6 sm:bottom-0  sm:w-[27px] sm:h-[27px] lg:w-[32px] lg:h-[32px] cursor-pointer z-10 " />
+      <Link
+        aria-label="scroll to another section"
+        className="flex items-center justify-center mx-auto mt-[11px] mb-6 lg:mb-0 lg:mt-0 relative lg:absolute lg:bottom-[20px] sm:bottom-0 w-[30px] h-[30px] lg:w-10 lg:h-10 cursor-pointer  z-10 "
+        href={"/"}
+      >
+        <Logo className="sm:w-[27px] sm:h-[27px] lg:w-[32px] lg:h-[32px] " />
       </Link>
     </section>
   );

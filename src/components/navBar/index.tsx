@@ -68,7 +68,7 @@ const NavBar = () => {
             <Link href={`/${item.toLowerCase()}`}>
               <span className="flex flex-row items-center group sm:text-[12px] lg:text-sm">
                 {item}
-                <span className="group-hover:text-[#ddf247] ml-1 ">•</span>
+                <span className="group-hover:text-accent ml-1 ">•</span>
               </span>
             </Link>
           </motion.li>
@@ -80,8 +80,8 @@ const NavBar = () => {
         onClick={handleOpenMenu}
       >
         <Menu
-          className={`sm:w-[30px] sm:h-[30px] lg:w-10 lg:h-10 group-hover:text-[#ddf247] ${
-            openMenu ? "text-[#ddf247]" : ""
+          className={`sm:w-[30px] sm:h-[30px] lg:w-10 lg:h-10 group-hover:text-accent ${
+            openMenu ? "text-accent" : ""
           }`}
         />
       </button>

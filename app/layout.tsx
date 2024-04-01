@@ -54,7 +54,7 @@ export default function RootLayout({
   return (
     <html
       lang="es-419"
-      className={`${inter.variable} ${lato.variable} touch-auto overflow-auto h-full relative scrollbar `}
+      className={`${inter.variable} ${lato.variable} antialiased touch-auto overflow-auto h-full relative scrollbar `}
     >
       <body className="flex overflow-auto relative flex-col w-full h-full">
         <NavBar />

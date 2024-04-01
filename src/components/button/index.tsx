@@ -8,12 +8,14 @@ export function Button({ className, children, svg, ...props }: ButtonProps) {
     <button
       aria-label="Go to get started"
       className={clsx(
-        "font-lato leading-[14px] text-[14px] flex flex-row items-center justify-center gap-[10px] bg-[#000000] text-white rounded-[10px] py-5 px-8 font-bold text-nowrap border-2 border-transparent hover:border-[#ddf247] hover:text-[#ddf247] transition-all duration-300",
+        "flex flex-row items-center justify-center gap-[10px] bg-black text-white rounded-[10px] py-5 px-8 outline outline-0 hover:outline-2 outline-accent hover:text-accent transition-all duration-300",
         className
       )}
       {...props}
     >
-      {children}
+      <span className="font-lato leading-[14px] text-[14px] font-bold text-nowrap">
+        {children}
+      </span>
       {svg}
     </button>
   );
