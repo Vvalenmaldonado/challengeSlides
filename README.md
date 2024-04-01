@@ -1,3 +1,21 @@
+
+Welcome to the repository for my practical exercise for Slides. This project is a modern and efficient demonstration of a web application built using Next.js, TypeScript, and Tailwind CSS. I have focused on adhering to the best development and design practices to ensure optimal performance, accessibility, and user experience.
+
+Technologies and Tools
+Next.js, TypeScript, Tailwind CSS.
+Framer Motion: Integrated to add smooth animations and transitions.
+React Use: A collection of useful Hooks for managing various states and effects within React components.
+CLSX: Used for dynamically managing element classes, making style conditionality easier to handle.
+Features
+Optimal Performance: Achieving perfect scores in Lighthouse across all categories (Performance, Accessibility, Best Practices, SEO) when tested in incognito mode.
+Enhanced SEO: Implemented with Next.js best practices, ensuring the application is easily indexable and rankable by search engines.
+Modern Development Practices: Code structure and design patterns following current recommendations for React and Next.js applications.
+![LIGHTHOUSE100](https://github.com/Vvalenmaldonado/challengeSlides/assets/86607340/cf3ee50b-b96a-4ebb-aeeb-cb4dce9c908d)
+
+This project was deployed using Vercel. 
+Url: https://challenge-slides.vercel.app/
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
