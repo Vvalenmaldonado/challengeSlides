@@ -4,21 +4,21 @@
 const path = require("path");
 
 const nextConfig = {
-  reactStrictMode: true, // react te caga mas a pedos
+  reactStrictMode: true,
   experimental: {
     optimizeCss: true,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV !== "development",
   },
-  swcMinify: true, // reduce el bundle size
+  swcMinify: true,
   images: {
     domains: [],
     formats: ["image/avif", "image/webp"],
   },
   webpack: (config, options) => {
     config.module.rules.push({
-      test: /\.svg$/, // si el archivo es un svg cargarlo con svgr
+      test: /\.svg$/,
       use: [
         {
           loader: "@svgr/webpack",
@@ -68,7 +68,8 @@ const nextConfig = {
 
     return config;
   },
-  headers: async () => { // cosas de seguridad
+  headers: async () => {
+    // cosas de seguridad
     return [
       {
         source: "/(.*)",
